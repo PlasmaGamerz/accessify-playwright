@@ -9,9 +9,6 @@ echo "========================================"
 
 echo "Node: $(node -v)"
 echo "NPM:  $(npm -v)"
+echo "Startup: ${STARTUP}"
 
-MODIFIED_STARTUP=$(eval echo $(echo ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g'))
-
-echo ":/home/container$ ${MODIFIED_STARTUP}"
-
-exec ${MODIFIED_STARTUP}
+exec /bin/bash -c "${STARTUP}"
