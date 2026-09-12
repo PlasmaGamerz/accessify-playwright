@@ -9,6 +9,6 @@ echo "========================================"
 
 echo "Node: $(node -v)"
 echo "NPM:  $(npm -v)"
-echo "Startup: ${STARTUP}"
+echo "STARTUP: ${STARTUP}"
 
 exec /bin/bash -c "${STARTUP}"
